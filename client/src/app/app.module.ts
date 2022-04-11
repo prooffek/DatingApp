@@ -10,6 +10,12 @@ import { NavComponent } from './nav/nav.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { ListComponent } from './list/list.component';
+import { MessagesComponent } from './messages/messages.component';
+import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './_modules/shared.module';
 import { TestErrorsComponent } from './src/app/errors/test-errors/test-errors.component';
 
 @NgModule({
@@ -19,6 +25,11 @@ import { TestErrorsComponent } from './src/app/errors/test-errors/test-errors.co
     HomeComponent,
     RegisterComponent,
     TestErrorsComponent
+    RegisterComponent,
+    MemberListComponent,
+    MemberDetailComponent,
+    ListComponent,
+    MessagesComponent
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +37,7 @@ import { TestErrorsComponent } from './src/app/errors/test-errors/test-errors.co
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
