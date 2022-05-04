@@ -24,5 +24,10 @@ namespace API.Entities
         {
             return DateOfBirth.CalculateAge();
         }
+
+        /*public string GetPhotoUrl()
+        {
+            return Photos.FirstOrDefault(pic => pic.IsMain).Url;
+        }*/
     }
 }
