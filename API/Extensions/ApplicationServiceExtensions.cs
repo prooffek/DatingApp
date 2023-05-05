@@ -3,7 +3,6 @@ using API.Helpers;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
-using AutoMapper;
 
 namespace API.Extensions
 {
@@ -23,6 +22,7 @@ namespace API.Extensions
             });
             services.AddScoped<LogUserActivity>();
             services.AddScoped<ILikesRepository, LikesRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
 
             return services;
         }
