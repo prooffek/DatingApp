@@ -13,7 +13,6 @@ import { AuthGuard } from './_guards/auth.guard';
 import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.guard';
 import { MemberDetailsResolver } from './_resolvers/member-details.resolver';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
-import { AdminGuard } from './_guards/admin.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,7 +33,7 @@ const routes: Routes = [
       },
       { path: 'lists', component: ListComponent },
       { path: 'messages', component: MessagesComponent },
-      { path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard] },
+      { path: 'admin', component: AdminPanelComponent },
     ],
   },
   { path: 'errors', component: TestErrorsComponent },
