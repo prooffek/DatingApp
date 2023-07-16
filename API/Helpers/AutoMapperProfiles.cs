@@ -10,9 +10,9 @@ namespace API.Helpers
         public AutoMapperProfiles()
         {
             CreateMap<AppUser, MemberDto>()
-                .ForMember(destination => destination.PhotoUrl, options => 
-                    options.MapFrom( src => src.Photos.FirstOrDefault(pic => pic.IsMain).Url))
-                .ForMember(dest => dest.Age, options => 
+                .ForMember(destination => destination.PhotoUrl, options =>
+                    options.MapFrom(src => src.Photos.FirstOrDefault(pic => pic.IsMain).Url))
+                .ForMember(dest => dest.Age, options =>
                     options.MapFrom(src => src.DateOfBirth.CalculateAge()));
             CreateMap<Photo, PhotoDto>();
             CreateMap<MemberUpdateDto, AppUser>();

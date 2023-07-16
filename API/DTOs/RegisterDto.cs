@@ -7,19 +7,19 @@ namespace API.DTOs
         [Required]
         public string UserName { get; set; }
 
-        [Required] 
+        [Required]
         public string KnownAs { get; set; }
 
-        [Required] 
+        [Required]
         public string Gender { get; set; }
 
-        [Required] 
+        [Required]
         public DateTime DateOfBirth { get; set; }
 
-        [Required] 
+        [Required]
         public string City { get; set; }
 
-        [Required] 
+        [Required]
         public string Country { get; set; }
 
         [Required]
