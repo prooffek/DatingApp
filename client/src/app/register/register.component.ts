@@ -1,9 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {
   AbstractControl,
-  UntypedFormBuilder,
+  FormBuilder,
   FormControl,
-  UntypedFormGroup,
+  FormGroup,
   ValidatorFn,
   Validators,
 } from '@angular/forms';
@@ -18,14 +18,14 @@ import { AccountService } from '../_services/account.service';
 })
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
-  registerForm: UntypedFormGroup;
+  registerForm: FormGroup;
   maxDate: Date;
   validationErrors: string[] = [];
 
   constructor(
     private accountService: AccountService,
     private toastr: ToastrService,
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
     private router: Router
   ) {}
 
