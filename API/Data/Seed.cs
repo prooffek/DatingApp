@@ -34,27 +34,6 @@ namespace API.Data
                 user.LastActive = DateTime.SpecifyKind(user.LastActive, DateTimeKind.Utc);
                 await userManager.CreateAsync(user, "Pa$$w0rd");
                 await userManager.AddToRoleAsync(user, "Member");
-
-                //var role = await context
-                //    .Roles
-                //    .AsNoTracking()
-                //    .FirstOrDefaultAsync(r => r.Name == "Member");
-
-                //var userToUpdate = await context
-                //    .Users
-                //    .AsNoTracking()
-                //    .FirstAsync(u => u.UserName == user.UserName);
-
-                //var userRole = new UserRole
-                //{
-                //    AppUser = userToUpdate,
-                //    UserId = userToUpdate.Id,
-                //    AppRole = role,
-                //    RoleId = role.Id
-                //};
-
-                //context.UserRoles.Add(userRole);
-                //await context.SaveChangesAsync();
             }
 
             var admin = new AppUser
